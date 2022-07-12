@@ -180,4 +180,16 @@ int main(){
 
 13. Write a program to take a three-digit number from the user and rotate its digits by
 one position towards the right.
-Ans => doubt
+Ans => #include <stdio.h>
+int main(){
+    printf("Enter the number:\n");
+    int n,a,b,c,d;
+    scanf("%d",&n);
+    a = n/10;
+    b = n%10;
+    c = b*100;
+    d = a+c;
+    printf("Rotate number is  %d:", d);
+    return 0;
+}
+
