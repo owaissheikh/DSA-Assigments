@@ -1,0 +1,198 @@
+1. Write a program to find the Nth term of the Fibonnaci series.
+
+#include<stdio.h>
+int main()
+{
+int n, t1 = 0, t2 = 1, nextTerm = 0, i;
+printf("Enter the n value: ");
+scanf("%d", &n);
+if(n == 0 || n == 1)
+printf("%d", n);
+else
+nextTerm = t1 + t2;
+for (i = 3; i <= n; ++i)
+{
+t1 = t2;
+t2 = nextTerm;
+nextTerm = t1 + t2;
+}
+printf("%d", t2);
+}
+
+2. Write a program to print first N terms of Fibonacci series
+
+#include<stdio.h>
+int main()
+{
+int n, t1 = 0, t2 = 1, nextTerm = 0, i;
+printf("Enter the n value: ");
+scanf("%d", &n);
+if(n == 0 || n == 1)
+printf("%d", n);
+else
+printf("%d %d ",t1,t2);
+nextTerm = t1 + t2;
+for (i = 3; i <= n; ++i)
+{
+t1 = t2;
+t2 = nextTerm;
+nextTerm = t1 + t2;
+printf("%d ", t2);
+}
+return 0;
+}
+
+3. Write a program to check whether a given number is there in the Fibonacci
+series or not.
+
+#include<stdio.h>
+int main()
+{
+int firstnumber=0;
+int secountnumner =1;
+int thirdnumber = 0;
+int inputnumber;
+printf("Enter the number \n");
+scanf("%d",&inputnumber);
+while(thirdnumber<inputnumber){
+    thirdnumber = firstnumber+secountnumner;
+    firstnumber = secountnumner;
+    secountnumner = thirdnumber;
+}
+if(thirdnumber==inputnumber)
+    printf("number is present");
+else
+    printf("number does not belog to febo..");
+}
+
+4. Write a program to calculate HCF of two numbers
+#include<stdio.h>
+int main()
+{
+    int a,b,h;
+    printf("Enter the number :\n");
+    scanf("%d%d",&a,&b);
+    for(h=a<b?a:b; h>=1; h--){
+        if(a%h==0 && b%h==0)
+            break;
+    }
+    printf("HFC is %d ",h);
+    return 0;
+
+}
+
+5. Write a program to check whether two given numbers are co-prime numbers or not
+#include<stdio.h>
+int main()
+{
+    int a,b,flag=1,count,min;
+    printf("Enter the number :\n");
+    scanf("%d%d",&a,&b);
+    min=a<b?a:b;
+    for(count=2; count<=min; count++){
+        if(a%count==0 && b%count==0){
+            flag = 0;
+            break;
+        }
+
+    }
+    if(flag){
+      printf("co prime");
+    } else{
+        printf("not co prime");
+    }
+
+
+    return 0;
+
+}
+6. Write a program to print all Prime numbers under 100
+#include<stdio.h>
+int main()
+{
+    printf("All prime number from 1 to 100\n");
+  for(int n=1; n<=100; n++){
+      int count=0;
+  for(int i=1; i<=n; i++){
+    if(n%i==0)
+    count++;
+  }
+  if(count==2)
+    printf("%d ",n);
+  }
+
+  return 0;
+}
+
+7. Write a program to print all Prime numbers between two given numbers
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter 2 number \n");
+    scanf("%d%d",&a,&b);
+  for(int n=a; n<=b; n++){
+      int count=0;
+  for(int i=1; i<=n; i++){
+    if(n%i==0)
+    count++;
+  }
+  if(count==2)
+    printf("%d ",n);
+  }
+
+  return 0;
+}
+
+8. Write a program to find next Prime number of a given number
+9. Write a program to check whether a given number is an Armstrong number
+or not
+
+#include<stdio.h>
+int main()
+{
+    int n,b,cube,div,sum=0,temp=n;
+    printf("Enter the number\n");
+    scanf("%d",&n);
+
+    while(n>0)
+    {
+        b = n%10;
+        cube = b*b*b;
+        sum = cube+sum;
+        n = n/10;
+    }
+    n=temp;
+
+    if(n==sum){
+        printf("Amrstone number \n");
+    }else{
+    printf("number is not a Armstone");
+}
+
+  return 0;
+}
+
+10. Write a program to print all Armstrong numbers under 1000
+#include<stdio.h>
+int main()
+{
+    int n,r,x,s;
+   for(n=1; n<=1000; n++){
+        s=0;
+        x=n;
+    while(x!=0)
+    {
+        r= x%10;
+        s =  s+r*r*r;
+        x = x/10;
+    }
+
+    if(s==n)
+        printf("Amrstone number %d\n ",n);
+   }
+
+  return 0;
+}
+
+
