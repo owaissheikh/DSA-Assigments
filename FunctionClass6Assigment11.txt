@@ -1,0 +1,202 @@
+1. Write a function to calculate LCM of two numbers. (TSRS)
+#include<stdio.h>
+void factor(int);
+int main()
+{
+    int x,y,z;
+    printf("Enter two numbers\n");
+    scanf("%d %d",&x,&y);
+    z = lcm(x,y);
+    printf("Lcm is %d",z);
+}
+
+int lcm(int a, int b){
+    int l;
+    for(l=1; l<=a*b; l++){
+        if(l%a==0 && l%b==0)
+        break;
+    }
+    return l;
+} 
+
+2. Write a function to calculate HCF of two numbers. (TSRS)
+#include<stdio.h>
+void factor(int);
+int main()
+{
+    int x,y,z;
+    printf("Enter two numbers\n");
+    scanf("%d %d",&x,&y);
+    z = hcf(x,y);
+    printf("hcf is %d",z);
+}
+
+int hcf(int a, int b){
+    int l;
+    for(l=a<b?a:b; l>=1; l--){
+        if(a%l==0 && b%l==0)
+            break;
+    }
+    return l;
+}
+
+3. Write a function to check whether a given number is Prime or not. (TSRS)
+#include<stdio.h>
+int hcf(int);
+int main()
+{
+    int x,z;
+    printf("Enter two numbers\n");
+    scanf("%d",&x);
+    z = hcf(x);
+    if(z==x){
+       printf("Number is prime");
+    }else{
+    printf("Number is not prime");
+    }
+
+}
+
+int hcf(int a){
+    int l;
+    for(l=2; l<=a; l++){
+        if(a%l==0)
+            break;
+    }
+    return l;
+}
+4. Write a function to find the next prime number of a given number. (TSRS)
+#include<stdio.h>
+int twoprimenumber(int);
+int main()
+{
+    int a,b;
+    printf("Enter a number\n");
+    scanf("%d",&a);
+     twoprimenumber(a);
+
+
+}
+
+int twoprimenumber(int a){
+    int i,n,flag=0;
+    for(n=a; 1; n++){
+            flag=0;
+        for(i=2; i<=n/2; i++){
+            if(n%i==0)
+                flag=1;
+        }
+        if(flag==0)
+        {
+            printf("%d ",n);
+             return n;
+
+        }
+
+    }
+}
+
+
+5. Write a function to print first N prime numbers (TSRN)
+#include<stdio.h>
+int main()
+{
+    int N;
+    printf("Enter a number\n");
+    scanf("%d",&N);
+    nPrime(N);
+
+}
+
+int nPrime(int N ){
+    int i,x=2;
+    if(N<1)
+        return;
+ while(N)
+    {
+        for(i=2; i<x; i++)
+            if(x%i==0)
+                break;
+        if(i==x){
+            printf("%d ",x);
+            N--;
+        }
+        x++;
+    }
+
+
+}
+
+6. Write a function to print all Prime numbers between two given numbers. (TSRN)
+#include<stdio.h>
+
+int main()
+{
+    int a,b;
+    printf("Enter a number\n");
+    scanf("%d%d",&a,&b);
+   int c = twoprimenumber(a,b);
+   printf("%d",c);
+
+}
+
+void twoprimenumber(int a, int b){
+    int i,n,flag=0;
+    for(n=a; n<=b; n++){
+            flag=0;
+        for(i=2; i<=n/2; i++){
+            if(n%i==0)
+                flag=1;
+        }
+        if(flag==0)
+            printf("%d ",n);
+    }
+}
+
+7. Write a function to print first N terms of Fibonacci series (TSRN)
+#include<stdio.h>
+int fact(int);
+int main()
+{
+    int n;
+    printf("Enter the number \n");
+    scanf("%d",&n);
+    fact(n);
+}
+
+int fact(int n)
+
+{
+    int f1=0,f2=1; 
+    printf("%d ",f1);
+    for(int i=1; i<=n; i++){
+        printf("%d ",f2);
+        int next = f1+f2;
+        f1=f2;
+        f2=next;
+    }
+}
+
+
+8. Write a function to print PASCAL Triangle. (TSRN)
+9. Write a program in C to find the square of any number using the function.
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the number \n");
+    scanf("%d",&n);
+    printf(" square is %d",square(n));
+}
+
+int square(int n)
+
+{
+    int c;
+    c= n*n;
+    return c;
+}
+
+
+10. Write a program in C to find the sum of the series 1! /1+2!/2+3!/3+4!/4+5!/5 using the
+function.
