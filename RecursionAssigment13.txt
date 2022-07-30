@@ -1,0 +1,97 @@
+1. Write a recursive function to calculate sum of first N natural numbers
+#include<stdio.h>
+int recursion(int);
+int main()
+{
+    int n;
+    printf("Enter a number \n");
+    scanf("%d",&n);
+    printf("%d",recursion(n));
+
+}
+
+int recursion(int n){
+    int c;
+    if(n>=1)
+    return n+recursion(n-1);
+
+}
+2. Write a recursive function to calculate sum of first N odd natural numbers
+#include<stdio.h>
+int recursion(int);
+int main()
+{
+    int n;
+    printf("Enter a number \n");
+    scanf("%d",&n);
+    printf("%d ",recursion(n));
+
+}
+
+int recursion(int n){
+    if(n==1)
+        return 1;
+    return (2*n-1 + recursion(n-1));
+
+}
+
+3. Write a recursive function to calculate sum of first N odd natural numbers
+#include<stdio.h>
+int recursion(int);
+int main()
+{
+    int n;
+    printf("Enter a number \n");
+    scanf("%d",&n);
+    printf("%d ",recursion(n));
+
+}
+
+int recursion(int n){
+    if(n==1)
+        return 1;
+    return (2*n-1 + recursion(n-1));
+
+}
+4. Write a recursive function to calculate sum of squares of first n natural numbers
+#include<stdio.h>
+int recursion(int);
+int main()
+{
+    int n;
+    printf("Enter a number \n");
+    scanf("%d",&n);
+    printf("%d ",recursion(n));
+
+}
+
+int recursion(int n){
+    if(n==1)
+        return 1;
+    return (n*n+ recursion(n-1));
+
+}
+5. Write a recursive function to calculate sum of digits of a given number
+6. Write a recursive function to calculate factorial of a given number
+#include<stdio.h>
+int recursion(int);
+int main()
+{
+    int n;
+    printf("Enter a number \n");
+    scanf("%d",&n);
+    printf("%d ",recursion(n));
+
+}
+
+int recursion(int n){
+    if(n==1)
+        return 1;
+    return (n*recursion(n-1));
+
+}
+
+7. Write a recursive function to calculate HCF of two numbers
+8. Write a recursive function to print first N terms of Fibonacci series
+9. Write a program in C to count the digits of a given number using recursion.
+10. Write a program in C to calculate the power of any number using recursion.
